@@ -3,14 +3,8 @@ package calculator
 fun main() {
    println("덧셈할 문자열을 입력해 주세요.")
     val input = readlnOrNull() ?: ""
-
-    try {
-        val result = add(input)
-        println("결과 : $result")
-    } catch (_: IllegalArgumentException) {
-        return
-    }
-
+    val result = add(input)
+    println("결과 : $result")
 }
 
 /* 기본 덧셈 기능 */
