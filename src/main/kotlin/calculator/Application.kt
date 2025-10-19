@@ -48,7 +48,8 @@ private fun parser(input: String): Pair<String, String> {
     // 만약 "//" 이거로 시작하면
     if(input.startsWith("//")){
         // 뒤에 \n 기점으로 나누기
-        val split = input.split("\n", limit = 2)
+        val normalized = input.replace("\\n", "\n")
+        val split = normalized.split("\n", limit = 2)
         // 앞에는 구분자 정보
         val delimiterPart = split[0]
         // 뒤에는 문자열 + 숫자인 문자열 정보
